@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MTWApp">  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stan Moshero, CPA">
+    <meta name="description" content="Veterinary Accounting and Tax Services">
+
+    <title>Stan Moshero</title>
+<!-- Vendor Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-aria.js"></script>
+    <!-- <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-route/angular-route.min.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="./node_modules/angular-aria/angular-aria.min.js"></script> -->
+    <script src="vendorAssets/angular-material.js"></script>
+
+    <link rel="stylesheet" href="./vendorAssets/angular-material.min.css">
+    <script src="https://use.fontawesome.com/dc76fbddb7.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <base href="/">
+  </head>
+  <body ng-cloak>
+    <header id="site-header">
+      <h2 id="provider-name">Stan Moshero, CPA</h2>
+      <h4>CPA Services for You and Your Business</h4>
+    </header>
+    <navbar ng-include="'components/navbar/navbar.template.html'" >  </navbar>
+    
+    <div class="main-container">
+      <ng-view></ng-view>
+      </div>
+    
+    <!--<ui-view name='main-content'></ui-view>-->
+  </body>
+
+
+  <!-- Local Components -->
+  <script src="./app.module.js"></script>
+  <script src="./app.config.js"></script>
+  <script src="./components/navbar/navbar.component.js"></script>
+  <script src="./components/home/home.component.js"></script>
+  <script src="./components/about/about.component.js"></script>
+  <script src="./components/services/services.component.js"></script>
+  <script src="./components/scheduling/scheduling.component.js"></script>
+
+</html>
