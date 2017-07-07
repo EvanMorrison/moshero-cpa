@@ -28,7 +28,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "webpack-dev-server --config webpack.dev.config.js --progress --colors",
-    "build": "webpack --config webpack.dev.config.js -p"
+    "build": "webpack --config webpack.dev.config.js -p --progress --colors"
   },
   "author": "Evan Morrison",
   "license": "ISC"

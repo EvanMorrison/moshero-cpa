@@ -1,0 +1,12 @@
+<div class="PageLayout" layout="column">
+  <!-- <ui-view name="myname"></ui-view> -->
+ <div ui-view="header"></div>
+ <ui-view name="hero"></ui-view>
+ <div layout="row">
+     <md-content flex-gt-md="80" flex-offset-gt-md="10" flex-gt-xs="90" flex-offset-gt-xs="5"
+                  layout-gt-xs="row" layout="column">
+       <div ui-view="mainContent" flex-gt-sm="66" flex-sm="60" ></div>
+       <div ui-view="sidebar" flex-gt-sm="33" flex-sm="30" flex-offset-sm="5" ></div>
+     </md-content>
+ </div>
+</div>

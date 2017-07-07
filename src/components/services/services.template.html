@@ -1,11 +1,19 @@
 <md-content class="page-content">
 
   <h1 class="page-heading">
-    Services and Pricing
+    Services Available
   </h1>
 
   <p class="body-text">
-    {{$ctrl.content}}
+    {{ctrl.content}}
   </p>
+  <p>Among those services are:</p>
+  <md-content>
+    <ul>
+      <li ng-repeat="service in ctrl.servicesList">
+        {{service}}
+      </li>
+    </ul>
+  </md-content>
 
 </md-content>

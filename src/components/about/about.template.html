@@ -3,9 +3,19 @@
   <h1 class="page-heading">
     About Stan
   </h1>
+  <img style="width:200px;height:auto" ng-src="{{ctrl.profilePic}}" alt="">
 
   <p class="body-text">
     <strong style="font-size:20px">Stan Moshero</strong>, CPA has years of experience advising clients an a wide range of occupations and business. Stan is particularly expert in accounting, bookkeeping, and tax strategy for Veterinary practices.
   </p>
+  <p>Call or email now to schedule a free consultation:</p>
+  <address id="contact-info">
+      <i class="fa fa-phone" aria-hidden="true" style="margin-top: 20px"> </i> 
+      <span class="md-body-2">{{ctrl.provider.tel}}</span>
+      <br>
+      <i class="fa fa-envelope-o" style="margin-top: 20px"> </i>
+      <span class="md-body-2"><a href="mailto:{{ctrl.provider.email}}">{{ctrl.provider.email}}</a></span>
+
+    </address>
 
 </md-content>

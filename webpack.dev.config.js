@@ -16,15 +16,18 @@ module.exports = {
   devtool: 'cheap-module-source-map',
 
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true
   },
 
   module: {
     rules: [
       {test: /\.js$/, exclude: /node_modules/, use: 'babel-loader'},
       {test: /\.html$/, exclude: /node_modules/, use: 'raw-loader'},
-      {test: /\.(jpe?g|png|gif)$/, exclude: /node_modules/, use: 'file-loader'},
-      {test: /\.css$/, use: ['style-loader', 'css-loader']}
+      {test: /\.css$/, use: ['style-loader', 'css-loader']},
+      {test: /\.(jpe?g|png|gif)$/, exclude: /node_modules/, 
+        use: 'file-loader?name=assets/[hash].[ext]',
+      },
     ]
   },
 

@@ -1,0 +1,25 @@
+<md-card class="sidebar" layout="column" layout-align="center center">
+    <md-toolbar class="md-toolbar-tools md-hue-1" layout-align="center center">
+        <md-card-title-text class="md-headline">Hello & Welcome</md-card-title-text>
+    </md-toolbar>
+    <img class="md-card-image" ng-src="{{ctrl.profilePic}}" alt="">
+  <md-card-content>
+    <div class="md-headline">Stan Moshero, CPA</div>
+      <p class="md-body-1" >
+        {{ctrl.bodyText}}
+      </p>
+      <address id="contact-info">
+        <i class="fa fa-phone" aria-hidden="true" style="margin-top: 20px"> </i> 
+        <span class="md-body-2">{{ctrl.provider.tel}}</span>
+        <br>
+        <i class="fa fa-envelope-o" style="margin-top: 20px"> </i>
+        <span class="md-body-2"><a href="mailto:{{ctrl.provider.email}}">{{ctrl.provider.email}}</a></span>
+        <br>
+        <a style="text-decoration:none" href="{{ctrl.provider.googleMapsUrl}}" target="_blank">
+          <i class="fa fa-map-marker" style="margin-top: 20px"></i> 
+          <span id="address1" class="md-body-2">{{ctrl.provider.address1}}</span><br>
+          <i class="fa fa-map-marker" style="visibility:hidden;padding:0"></i> 
+          <span id="address2" class="md-body-2">{{ctrl.provider.address2}}</span><br></a>
+      </address>
+  </md-card-content>
+</md-card>

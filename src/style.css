@@ -2,67 +2,87 @@
 
 body {
   font-family: 'Open Sans';
-  padding: 0;
+  padding: 0 0 300px;
   margin: 0;
+  overflow-x: hidden;
 }
 
-#site-header {
+p {
+  text-align: justify;
+}
+
+
+.navbar [ui-sref] {
+  font-weight: 700;
+}
+
+.navbar .active[ui-sref-active] {
+  border-bottom: 1px solid #000;
+  font-weight: 900;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.site-header.header-container {
   font-family: 'Montserrat', 'Open Sans', 'Helvetica Neue', 'sans-serif';
   background-color: rgba(173,193,240,0.35);
-  padding: 0 10vw 30px;
+  padding: 30px 0 30px;
   margin: 0;
 }
 
-#site-header h2 {
-  padding-top: 30px;
+.site-header h2 {
   padding-bottom: 0px;
   margin: 0;
 }
 
-#site-header h4 {
+.site-header h4 {
   padding-top: 10px;
   margin: 0;
   font-weight: 100;
 }
 
-/*#navbar {
-  margin-top: 0;
-  padding-top:0;
-  margin-left: 10vw;
-}*/
-
-#navbar ul {
+.homepage-hero {
   position: relative;
-  margin-left: 7vw;
+  height: 100vh;
+  max-height: 700px;
+  background: transparent;
+  z-index: 1;
+  padding-left: 20px;
 }
 
-#navbar a{
-  font-weight: 700;
-  color: #fff;
+.homepage-hero::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+  z-index: -1;
+  background: linear-gradient(rgba(250,220,200,.8) 80px, rgba(250,220,200,0)), 
+              url('./assets/girl-1561943_640.jpg');
+  background-size: 100% 300px, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top right;
 }
 
-.bold {
-  font-weight: 700;
+.hero-title {
+  padding: 80px 0 0 10vw;
 }
 
-.main-container {
-  margin-left: 10vw;
-  width: 80vw;
-}
-
-.page-heading h1 {
-  color: #222;
-  margin-bottom: 0;
-  font-size: 30px;
-  padding: 30px 10px 0px 0;
+.hero-title h1 {
+  margin: 0;
 }
 
 #subheading {
-  margin: 0 0;
-  font-family: 'Open Sans', 'Helvetica Neue';
   border-top: 1px solid #222;
-  width: 50vw;
-  color: #222;
+  width: 50%;
+  /*color: #fff;
+  text-shadow: 1px 1px #000;*/
   font-size: 6px;
 }
 
@@ -74,103 +94,19 @@ body {
   font-size: 14px;
 }
 
-.section1 {
-  color: #222;
-  padding: 110px 10px 80px;
-}
 
-#profile-pic {
-  width: 200px;
-}
-
-.section1 #provider-name {
-  padding: 0;
-  margin: 0;
-}
-
-.section1 .fa {
+.sidebar .fa {
   margin-right: 10px;
 }
 
-.section1 a {
+.sidebar a {
   color: #222;
 }
 
-.section2 {
-  position:relative;
-  margin: 0;
-  padding: 0 0 100px;
-  
-}
-
-.section2>h3 {
-  text-align: center;
-  padding: 0 0 20px;
-  margin: 0;
-  height: 100px;
-
-  background-image: url('http://i.imgur.com/lO70yjz.png');
-  background-repeat: no-repeat;
-  background-size: 900px 500px;
-  background-position-y: -150px;
-  background-position-x: center;
-}
-
-.section2 a {
-  font-size: 20px;
-  color: rgba(0,77,64 ,1);
-  text-shadow: 1px 1px 3px #444;
-  text-decoration: none ;
-}
-
-.map {
-  /*width: 67vw;*/
-  /*min-width: 200px;*/
-  width: 400px;
-  height: 400px;
-  /*min-height: 200px;*/
-  box-shadow: 0 0 20px 1px #aaa;
-  position: relative;
-  left: 50vw;
-  margin: 25px 30px 20px -200px;
-}
-
-
-.logo-banner {
-  background-color: #111;
-  max-height: 500px;
-  margin: 30px 0;
-  padding: 15px 0;
-}
-
-.logo {
-  position: relative;
-  background-color: #111;
-  border: 1px transparent;
-  border-radius: 100px;
-  margin-left:50vw;
-  left: -150px;
-  width:50vw;
-  max-width: 300px;
-}
 
 .page-content {
-  background:transparent;
-  width:50vw
-}
-
-.body-text {
-  font-family: 'Open Sans', 'Helvetica Neue', 'sans serif';
-  font-size: 16px;
-}
-
-#email-form {
-  border: 1px transparent;
-  border-radius: 5px;
-  padding: 20px;
-  font-weight: 400;
-  background-color: rgba(173,193,240,.2);
-
+  padding: 0 5vw;
+  min-height: 100vh;
 }
 
 
