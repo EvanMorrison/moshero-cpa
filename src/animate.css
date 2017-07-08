@@ -1,0 +1,9 @@
+.ng-enter {
+  opacity: 0;
+  transition: .5s;
+}
+
+.ng-enter-active {
+  opacity: 1;
+}
+
